@@ -81,10 +81,13 @@
           </nav>
           <article>
             <script>
-                var s=new URLSearchParams(window.location.search);
-                document.write(s.get("name")+ "<br>");
-                document.write(s.get("email")+ "<br>");
-                document.write(s.get("message")+ "<br>");
+               var searchParams = new URLSearchParams(window.location.search);
+var fn = searchParams.get("FirstName");
+var m = searchParams.get("Marks");
+
+document.write("Name  : " + fn + "</br>");
+document.write("Marks : " +  m + "</br>");
+
             </script>
           </article>
 
