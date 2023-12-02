@@ -2,23 +2,8 @@
 <html>
 <head>
   <title>Contact Us</title>
-  <script>
-    function check(){
- var fn = document.forms.f1.name.value;
- var  m = document.forms.f1.email.value;
- var  g = document.forms.f1.message.value;
 
- if (fn == "") { 
-    document.forms.f1.FirstName.focus(); 
-    return false;
-  }
- else if (m  == "") { 
-    document.forms.f1.Marks.focus(); 
-    return false; 
-  }
- else  return true; 
-}
-  </script>
+  
   <style>
     body{
     /*  background-image: url("talal images/background.jpeg" );*/
@@ -93,7 +78,7 @@
             </ul>
           </nav>
   <h2>Contact Us</h2>
-  <form action="result.html">
+  <form name="f1" action="result.html" onsubmit="return check()" method="get">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
 
@@ -105,6 +90,26 @@
 
     <input type="submit" value="Submit">
   </form>
+        <script>
+    function check(){
+ var fn = document.forms.f1.name.value;
+ var  m = document.forms.f1.email.value;
+ var  g = document.forms.f1.message.value;
+
+ if (fn == "") { 
+    document.forms.f1.name.focus(); 
+    return false;
+  }
+ else if (m  == "") { 
+    document.forms.f1.email.focus(); 
+    return false; 
+  }
+    else if (g  == "") { 
+    document.forms.f1.message.focus(); 
+    return false; 
+  }
+ else  return true; 
+}
 
   <footer>
     <!-- Footer section with the footer logo -->
