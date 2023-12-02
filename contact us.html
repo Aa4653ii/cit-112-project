@@ -3,7 +3,21 @@
 <head>
   <title>Contact Us</title>
   <script>
-    
+    function check(){
+ var fn = document.forms.f1.name.value;
+ var  m = document.forms.f1.email.value;
+ var  g = document.forms.f1.message.value;
+
+ if (fn == "") { 
+    document.forms.f1.FirstName.focus(); 
+    return false;
+  }
+ else if (m  == "") { 
+    document.forms.f1.Marks.focus(); 
+    return false; 
+  }
+ else  return true; 
+}
   </script>
   <style>
     body{
