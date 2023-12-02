@@ -2,9 +2,7 @@
 <html>
 <head>
   <title>Contact Us</title>
-  <script>
-    
-  </script>
+  
   <style>
     body{
     /*  background-image: url("talal images/background.jpeg" );*/
@@ -82,12 +80,12 @@
           <article>
             <script>
                var searchParams = new URLSearchParams(window.location.search);
-var fn = searchParams.get("FirstName");
-var m = searchParams.get("Marks");
-
+var fn = searchParams.get("name");
+var m = searchParams.get("email");
+var g = searchParams.get("message");
 document.write("Name  : " + fn + "</br>");
-document.write("Marks : " +  m + "</br>");
-
+document.write("email : " +  m + "</br>");
+document.write("message : " +  g + "</br>");
             </script>
           </article>
 
